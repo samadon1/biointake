@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schema.agentcore.aws.dev/v1/agentcore.json",
+  "name": "biointakeruntime",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "agentcore:created-by": "agentcore-cli",
+    "agentcore:project-name": "biointakeruntime"
+  },
+  "runtimes": [
+    {
+      "name": "biointake",
+      "build": "CodeZip",
+      "entrypoint": "main.py",
+      "codeLocation": "app/biointake/",
+      "runtimeVersion": "PYTHON_3_12",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP",
+      "envVars": [
+        {
+          "name": "BIOINTAKE_BACKEND",
+          "value": "aws"
+        },
+        {
+          "name": "BIOINTAKE_DDB_TABLE",
+          "value": "biointake-demo"
+        },
+        {
+          "name": "BIOINTAKE_S3_BUCKET",
+          "value": "biointake-demo-000000000000"
+        },
+        {
+          "name": "BIOINTAKE_MODEL_ID",
+          "value": "anthropic:claude-sonnet-5"
+        },
+        {
+          "name": "AWS_REGION",
+          "value": "us-east-1"
+        },
+        {
+          "name": "BIOINTAKE_PORTAL_BASE_URL",
+          "value": "https://megh2ru4xg.us-east-1.awsapprunner.com"
+        },
+        {
+          "name": "BIOINTAKE_DELIVERY",
+          "value": "recorded"
+        },
+        {
+          "name": "ANTHROPIC_API_KEY_PARAMETER",
+          "value": "/biointake/anthropic-api-key"
+        }
+      ],
+      "additionalPolicies": [
+        "data-policy.json"
+      ],
+      "lifecycleConfiguration": {
+        "idleRuntimeSessionTimeout": 300,
+        "maxLifetime": 3600
+      }
+    }
+  ],
+  "memories": [],
+  "knowledgeBases": [],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [],
+  "policyEngines": [],
+  "configBundles": [],
+  "abTests": [],
+  "harnesses": [],
+  "datasets": [],
+  "payments": []
+}

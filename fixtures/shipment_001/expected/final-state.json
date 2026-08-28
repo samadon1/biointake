@@ -1,0 +1,9 @@
+{
+  "accepted": 10,
+  "evidence_requests": 1,
+  "human_decisions": 1,
+  "quarantined": 2,
+  "recovered_via_evidence": 3,
+  "samples_received": 12,
+  "unauthorized_acceptances": 0
+}

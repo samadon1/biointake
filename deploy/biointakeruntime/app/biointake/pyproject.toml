@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+backend-path = []
+build-backend = "hatchling.build"
+
+[project]
+name = "biointake-runtime"
+version = "0.1.0"
+description = "AgentCore Runtime application for the BioIntake agent (wraps the packaged biointake wheel)"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "biointake",
+    "aws-opentelemetry-distro",
+    "bedrock-agentcore >= 1.22.0",
+    "botocore[crt] >= 1.35.0",
+    "strands-agents[anthropic] >= 1.53.0",
+]
+
+[tool.uv.sources]
+biointake = { path = "wheels/biointake-0.1.0-py3-none-any.whl" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

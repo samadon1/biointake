@@ -1,0 +1,51 @@
+{
+  "allowed_specimen_types": [
+    "PLASMA"
+  ],
+  "consent": {
+    "clause": "\u00a74.1, consent addendum v3 or later is required for plasma research use.",
+    "min_version": 3,
+    "required_scope": "RESEARCH_PLASMA"
+  },
+  "custody": {
+    "clause": "\u00a75.2, every handoff must be recorded with actor and timestamp, in order.",
+    "required_events": [
+      "COLLECTED",
+      "PACKED",
+      "SHIPPED",
+      "RECEIVED"
+    ]
+  },
+  "policy_id": "POLICY-PROTO-042",
+  "protocol_id": "PROTO-042",
+  "quarantine_roles": [
+    "COORDINATOR",
+    "PRINCIPAL_INVESTIGATOR",
+    "QA_REVIEWER"
+  ],
+  "reject_roles": [
+    "PRINCIPAL_INVESTIGATOR"
+  ],
+  "required_checks": [
+    "IDENTITY_MATCH",
+    "MANIFEST_MATCH",
+    "PROTOCOL_ELIGIBILITY",
+    "CONSENT_VALIDITY",
+    "TEMPERATURE_REQUIREMENT",
+    "CHAIN_OF_CUSTODY",
+    "LIMS_RECONCILIATION"
+  ],
+  "temperature": {
+    "clause": "\u00a77.3, a cumulative excursion above tolerance requires a documented principal-investigator disposition.",
+    "exception_allowed": true,
+    "exception_roles": [
+      "PRINCIPAL_INVESTIGATOR"
+    ],
+    "max_c": 8.0,
+    "max_gap_minutes": 30.0,
+    "min_c": 2.0,
+    "tolerance_minutes": 10.0
+  },
+  "title": "PROTO-042 Research Plasma Intake Policy",
+  "version": "3.0.0"
+}

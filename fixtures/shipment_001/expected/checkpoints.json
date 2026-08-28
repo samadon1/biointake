@@ -1,0 +1,69 @@
+{
+  "checkpoint_1": {
+    "ACCEPTED": [
+      "BX-201",
+      "BX-202",
+      "BX-203",
+      "BX-204",
+      "BX-205",
+      "BX-206",
+      "BX-208"
+    ],
+    "NEEDS_HUMAN_DECISION": [
+      "BX-212"
+    ],
+    "QUARANTINED": [
+      "BX-211"
+    ],
+    "WAITING_FOR_EVIDENCE": [
+      "BX-207",
+      "BX-209",
+      "BX-210"
+    ],
+    "case_state": "WAITING_FOR_EVIDENCE",
+    "evidence_requests": 1
+  },
+  "checkpoint_2": {
+    "ACCEPTED": [
+      "BX-201",
+      "BX-202",
+      "BX-203",
+      "BX-204",
+      "BX-205",
+      "BX-206",
+      "BX-207",
+      "BX-208",
+      "BX-209",
+      "BX-210"
+    ],
+    "NEEDS_HUMAN_DECISION": [
+      "BX-212"
+    ],
+    "QUARANTINED": [
+      "BX-211"
+    ],
+    "case_state": "NEEDS_HUMAN_DECISION",
+    "checks_rerun": 4,
+    "total_check_slots": 84
+  },
+  "checkpoint_3": {
+    "ACCEPTED": [
+      "BX-201",
+      "BX-202",
+      "BX-203",
+      "BX-204",
+      "BX-205",
+      "BX-206",
+      "BX-207",
+      "BX-208",
+      "BX-209",
+      "BX-210"
+    ],
+    "QUARANTINED": [
+      "BX-211",
+      "BX-212"
+    ],
+    "case_state": "COMPLETED",
+    "human_decisions": 1
+  }
+}

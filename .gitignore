@@ -1,0 +1,46 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+.env
+.DS_Store
+.local/
+spikes/.sessions/
+spikes/.state/
+deploy/**/.venv/
+deploy/**/node_modules/
+deploy/**/cdk.out/
+deploy/**/.cli/
+deploy/**/wheels/
+spikes/**/.venv/
+spikes/**/node_modules/
+spikes/**/cdk.out/
+spikes/**/.cli/
+
+# Anything that names the account it was deployed into, or was minted for it. These are produced by
+# a deployment rather than authored, and they are specific to whoever ran it.
+**/.cli/
+**/deployed-state.json
+.local/deploy-tokens.json
+
+# Node / Next build output kept out of the Python-side ignores above.
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+
+# Editor and OS noise
+.idea/
+.vscode/
+*.swp
+
+# Making the demo film and the submission, not the product. Kept locally, out of the repository:
+# a browser driver for recording, the shot list, and the cards and copy for Devpost.
+demo-driver/
+docs/demo-assets/
+docs/demo-script.md

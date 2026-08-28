@@ -1,0 +1,13 @@
+row,sample_id,participant_reference,specimen_type,container_id,collection_timestamp,notes
+1,BX-201,NS-P-0201,PLASMA,BOX-1,2026-08-24T09:07:00+00:00,
+2,BX-202,NS-P-0202,PLASMA,BOX-1,2026-08-24T09:14:00+00:00,
+3,BX-203,NS-P-0203,PLASMA,BOX-1,2026-08-24T09:21:00+00:00,
+4,BX-204,NS-P-0204,PLASMA,BOX-1,2026-08-24T09:28:00+00:00,
+5,BX-205,NS-P-0205,PLASMA,BOX-1,2026-08-24T09:35:00+00:00,
+6,BX-206,NS-P-0206,PLASMA,BOX-1,2026-08-24T09:42:00+00:00,
+7,BX-2O7,NS-P-0207,PLASMA,BOX-1,2026-08-24T09:49:00+00:00,
+8,BX-208,NS-P-0208,PLASMA,BOX-1,2026-08-24T09:56:00+00:00,
+9,BX-209,NS-P-0209,PLASMA,BOX-1,2026-08-24T10:03:00+00:00,"Consent addendum v3 pending from site coordinator (K. Mensah), will follow by email."
+10,BX-210,NS-P-0210,PLASMA,BOX-1,2026-08-24T10:10:00+00:00,"Consent addendum v3 pending from site coordinator (K. Mensah), will follow by email."
+11,BX-211,NS-P-0211,PLASMA,BOX-1,2026-08-24T10:17:00+00:00,
+12,BX-212,NS-P-0212,PLASMA,BOX-2,2026-08-24T10:24:00+00:00,Shipped in secondary container BOX-2 with its own logger.

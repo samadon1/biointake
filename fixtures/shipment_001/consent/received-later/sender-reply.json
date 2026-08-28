@@ -1,0 +1,17 @@
+{
+  "attachments": [
+    "consent-addendum.json"
+  ],
+  "free_text": "Hi, addendum v3 attached, it covers both participants. Also, row 7 of the manifest is BX-207, typo on our side (letter O), sorry about that.",
+  "from_contact_id": "SITE-CONTACT-002",
+  "structured_equivalent": {
+    "proposed_corrections": [
+      {
+        "corrected_value": "BX-207",
+        "manifest_row": 7,
+        "manifest_value": "BX-2O7",
+        "sender_statement": "Row 7 of the manifest is BX-207, typo on our side (letter O)."
+      }
+    ]
+  }
+}

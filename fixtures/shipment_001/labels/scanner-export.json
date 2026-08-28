@@ -1,0 +1,90 @@
+{
+  "exported_at": "2026-08-26T16:10:00+00:00",
+  "scanner_id": "SCAN-RX-07",
+  "scans": [
+    {
+      "barcode": "NS042-000201",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-201",
+      "scanned_at": "2026-08-26T15:52:00+00:00"
+    },
+    {
+      "barcode": "NS042-000202",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-202",
+      "scanned_at": "2026-08-26T15:53:00+00:00"
+    },
+    {
+      "barcode": "NS042-000203",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-203",
+      "scanned_at": "2026-08-26T15:54:00+00:00"
+    },
+    {
+      "barcode": "NS042-000204",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-204",
+      "scanned_at": "2026-08-26T15:55:00+00:00"
+    },
+    {
+      "barcode": "NS042-000205",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-205",
+      "scanned_at": "2026-08-26T15:56:00+00:00"
+    },
+    {
+      "barcode": "NS042-000206",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-206",
+      "scanned_at": "2026-08-26T15:57:00+00:00"
+    },
+    {
+      "barcode": "NS042-000207",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-207",
+      "scanned_at": "2026-08-26T15:58:00+00:00"
+    },
+    {
+      "barcode": "NS042-000208",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-208",
+      "scanned_at": "2026-08-26T15:59:00+00:00"
+    },
+    {
+      "barcode": "NS042-000209",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-209",
+      "scanned_at": "2026-08-26T16:00:00+00:00"
+    },
+    {
+      "barcode": "NS042-000210",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-210",
+      "scanned_at": "2026-08-26T16:01:00+00:00"
+    },
+    {
+      "barcode": "NS042-000211",
+      "container_id": "BOX-1",
+      "readable": true,
+      "sample_id": "BX-211",
+      "scanned_at": "2026-08-26T16:02:00+00:00"
+    },
+    {
+      "barcode": "NS042-000212",
+      "container_id": "BOX-2",
+      "readable": true,
+      "sample_id": "BX-212",
+      "scanned_at": "2026-08-26T16:03:00+00:00"
+    }
+  ]
+}

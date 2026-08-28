@@ -1,0 +1,46 @@
+[
+  {
+    "active": true,
+    "contact_id": "SITE-CONTACT-001",
+    "destination": "shipping@northstar-demo.example",
+    "display_name": "A. Boateng (shipping clerk)",
+    "role": "SITE_CONTACT",
+    "shipment_ids": [
+      "SHIP-DEMO-001"
+    ],
+    "site_id": "SITE-NORTHSTAR"
+  },
+  {
+    "active": true,
+    "contact_id": "SITE-CONTACT-002",
+    "destination": "k.mensah@northstar-demo.example",
+    "display_name": "K. Mensah (study coordinator)",
+    "role": "SITE_CONTACT",
+    "shipment_ids": [
+      "SHIP-DEMO-001"
+    ],
+    "site_id": "SITE-NORTHSTAR"
+  },
+  {
+    "active": false,
+    "contact_id": "SITE-CONTACT-003",
+    "destination": "r.owusu@northstar-demo.example",
+    "display_name": "R. Owusu (former coordinator)",
+    "role": "SITE_CONTACT",
+    "shipment_ids": [
+      "SHIP-DEMO-001"
+    ],
+    "site_id": "SITE-NORTHSTAR"
+  },
+  {
+    "active": true,
+    "contact_id": "SITE-CONTACT-009",
+    "destination": "l.quaye@eastbay-demo.example",
+    "display_name": "L. Quaye (Eastbay site)",
+    "role": "SITE_CONTACT",
+    "shipment_ids": [
+      "SHIP-DEMO-777"
+    ],
+    "site_id": "SITE-EASTBAY"
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "records": [
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0201",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0202",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0203",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0204",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0205",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0206",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0207",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0208",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 2,
+      "effective_date": "2025-11-15",
+      "notes": "Addendum v3 pending at site.",
+      "participant_reference": "NS-P-0209",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 2,
+      "effective_date": "2025-11-15",
+      "notes": "Addendum v3 pending at site.",
+      "participant_reference": "NS-P-0210",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0211",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    },
+    {
+      "consent_version": 3,
+      "effective_date": "2026-06-01",
+      "notes": "",
+      "participant_reference": "NS-P-0212",
+      "protocol_id": "PROTO-042",
+      "scope": "RESEARCH_PLASMA",
+      "status": "ACTIVE"
+    }
+  ],
+  "registry": "NORTHSTAR-CONSENT-REGISTRY"
+}

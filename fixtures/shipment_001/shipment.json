@@ -1,0 +1,22 @@
+{
+  "containers": [
+    {
+      "container_id": "BOX-1",
+      "logger_id": "LOGGER-A"
+    },
+    {
+      "container_id": "BOX-2",
+      "logger_id": "LOGGER-B"
+    }
+  ],
+  "data_classification": "SYNTHETIC",
+  "expected_sample_count": 12,
+  "notes": "Two insulated containers. BOX-2 is a secondary container holding one specimen.",
+  "protocol_id": "PROTO-042",
+  "protocol_version": "3.0.0",
+  "received_at": "2026-08-26T15:40:00+00:00",
+  "receiving_facility": "BioIntake Demonstration Biobank",
+  "sender_site_id": "SITE-NORTHSTAR",
+  "sender_site_name": "Northstar Research Site",
+  "shipment_id": "SHIP-DEMO-001"
+}

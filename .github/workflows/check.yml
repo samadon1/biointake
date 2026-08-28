@@ -1,0 +1,47 @@
+name: check
+
+# The claims in the README are checkable, so they are checked on every push: lint, types, and the
+# whole suite including the invariant fuzz over the disposition engine. Nothing here reaches AWS,
+# the tests run against the in-memory backend and the deterministic stand-in, so a fork gets a
+# green run with no credentials.
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run ruff check src tests scripts
+      - run: uv run ruff format --check src tests scripts
+      - run: uv run mypy
+      - run: uv run pytest
+
+  console:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      # Next writes the route and layout prop types during a build, so a bare tsc on a fresh
+      # checkout cannot resolve PageProps or LayoutProps. typegen produces them without the build.
+      - run: npx next typegen
+      - run: npx tsc --noEmit
+      - run: npx eslint src
+      - run: npm test
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_API_BASE: http://127.0.0.1:8000

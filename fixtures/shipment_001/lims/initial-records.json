@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "barcode": "NS042-000201",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0201",
+      "sample_id": "BX-201",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000202",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0202",
+      "sample_id": "BX-202",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000203",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0203",
+      "sample_id": "BX-203",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000204",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0204",
+      "sample_id": "BX-204",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000205",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0205",
+      "sample_id": "BX-205",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000206",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0206",
+      "sample_id": "BX-206",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000207",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0207",
+      "sample_id": "BX-207",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000208",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0208",
+      "sample_id": "BX-208",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000209",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0209",
+      "sample_id": "BX-209",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000210",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0210",
+      "sample_id": "BX-210",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000211",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0211",
+      "sample_id": "BX-211",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000212",
+      "protocol_id": "PROTO-042",
+      "record_id": "LIMS-EXP-0212",
+      "sample_id": "BX-212",
+      "specimen_type": "PLASMA",
+      "status": "EXPECTED"
+    },
+    {
+      "barcode": "NS042-000211",
+      "protocol_id": "PROTO-017",
+      "record_id": "LIMS-HIST-0093",
+      "sample_id": "AR-0093",
+      "specimen_type": "SERUM",
+      "status": "ARCHIVED"
+    }
+  ]
+}

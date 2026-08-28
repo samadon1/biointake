@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Semantic tokens. Light is the primary theme: lab software is used in bright
+   rooms next to bench lighting, and every LIMS a coordinator already knows is
+   light. Dark is offered for long shifts and for demo/projector use.
+--------------------------------------------------------------------------- */
+:root,
+/* Also a selector, not only the document root, so a subtree can force the light palette on itself. The
+   sender portal does exactly that: it is always light regardless of what the lab user has chosen, and
+   without this its semantic chips would resolve to dark tokens inside a light page. */
+[data-theme="light"] {
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --surface-2: #f2f5f9;
+  --border: #d3d9e2;
+  --border-strong: #a9b4c4;
+  --fg: #0d1117;
+  --fg-muted: #4a5768;
+  --fg-subtle: #7c8899;
+  --accent: #0a5fd0;
+  /* The application chrome: a committed ink navy rather than another shade of grey. The rail and the
+     header sit on this, which lets the working surfaces stay white and read as paper. */
+  --rail: #0e1a2b;
+  --rail-fg: #97a7bd;
+  --rail-fg-strong: #ffffff;
+  --rail-active: #1c2f4a;
+  --accent-fg: #ffffff;
+  /* Semantic hues, deliberately low-chroma. Saturated green/yellow/purple straight off the colour wheel
+     are what make an interface look generated rather than designed, and on a screen where six states sit
+     in one table row, high chroma competes for attention that the data should own. Sage, ochre, terracotta,
+     steel and a slate violet: distinguishable at a glance, quiet next to each other. */
+  --pass-bg: #edf4ef;
+  --pass-fg: #38624b;
+  --pass-border: #c2d7ca;
+  --fail-bg: #f9eeec;
+  --fail-fg: #8f4038;
+  --fail-border: #e0c1bb;
+  --warn-bg: #f8f2e6;
+  --warn-fg: #7d5a24;
+  --warn-border: #ddcaa6;
+  --info-bg: #edf1f7;
+  --info-fg: #35597f;
+  --info-border: #c4d2e2;
+  --decision-bg: #f0eef6;
+  --decision-fg: #574d7d;
+  --decision-border: #cbc5dd;
+  --neutral-bg: #e8ecf2;
+  --neutral-fg: #44505f;
+  /* Fills for data display. The -fg tokens are tuned for text contrast, which makes them very dark in the
+     light theme and very light in the dark one, used as a bar segment they read as heavy sludge in one
+     theme and as a pastel in the other. These are mid-tones that hold up as areas in both. */
+  --pass-solid: #4d8f6a;
+  --warn-solid: #c08a2e;
+  --fail-solid: #c05f52;
+  --info-solid: #4a7ba8;
+  --decision-solid: #7a6fae;
+  --neutral-solid: #9aa6b5;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.05), 0 1px 3px rgb(16 24 40 / 0.08);
+  --page-wash: radial-gradient(80rem 34rem at 14% -14%, #e5eaf2 0%, transparent 60%),
+    linear-gradient(180deg, #eaeef4 0%, #eef1f5 40%);
+  --surface-wash: linear-gradient(180deg, rgb(255 255 255 / 0.6) 0%, transparent 40%);
+  --rail-wash: linear-gradient(180deg, #16233a 0%, #0b1220 100%);
+}
+
+[data-theme="dark"] {
+  /* A cool near-black with a blue cast, then two surfaces a few points lighter. The separation between
+     bg / surface / surface-2 is deliberately small: depth comes from hairline borders and a top highlight,
+     not from stacking obviously different greys, which is what makes an interface look like a toy. */
+  --bg: #080b11;
+  --surface: #101620;
+  --surface-2: #161d29;
+  --border: #212b3a;
+  --border-strong: #33415a;
+  --fg: #e8edf5;
+  --fg-muted: #94a3b8;
+  --fg-subtle: #64748b;
+  --accent: #4b9bf5;
+  --accent-fg: #06121f;
+  --rail: #0a0d11;
+  --rail-fg: #8b97a5;
+  --rail-fg-strong: #ffffff;
+  --rail-active: #1b222b;
+  --pass-bg: #13241b;
+  --pass-fg: #8cbfa2;
+  --pass-border: #274434;
+  --fail-bg: #251616;
+  --fail-fg: #cf938c;
+  --fail-border: #46292a;
+  --warn-bg: #241d12;
+  --warn-fg: #c8a46c;
+  --warn-border: #453722;
+  --info-bg: #16202e;
+  --info-fg: #93b0cd;
+  --info-border: #2a3d54;
+  --decision-bg: #1e1b2b;
+  --decision-fg: #a79ec9;
+  --decision-border: #383350;
+  --neutral-bg: #1b2432;
+  --neutral-fg: #a8b6c8;
+  --pass-solid: #5f9b78;
+  --warn-solid: #b8893f;
+  --fail-solid: #b56a5f;
+  --info-solid: #5c88b8;
+  --decision-solid: #8076b0;
+  --neutral-solid: #55637a;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.5), 0 2px 8px rgb(0 0 0 / 0.35);
+  /* The gradient wash. Applied to the page and the chrome so surfaces read as lit from above rather than
+     as flat blocks, the whole difference between a dashboard and a demo. */
+  --page-wash: radial-gradient(80rem 34rem at 14% -14%, #141f31 0%, transparent 60%),
+    linear-gradient(180deg, #0a0e16 0%, #080b11 45%);
+  --surface-wash: linear-gradient(180deg, rgb(255 255 255 / 0.025) 0%, transparent 38%);
+  --rail-wash: linear-gradient(180deg, #121a28 0%, #0a0e15 100%);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-rail: var(--rail);
+  --color-rail-fg: var(--rail-fg);
+  --color-rail-fg-strong: var(--rail-fg-strong);
+  --color-rail-active: var(--rail-active);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-pass-bg: var(--pass-bg);
+  --color-pass-fg: var(--pass-fg);
+  --color-pass-border: var(--pass-border);
+  --color-fail-bg: var(--fail-bg);
+  --color-fail-fg: var(--fail-fg);
+  --color-fail-border: var(--fail-border);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-fg: var(--warn-fg);
+  --color-warn-border: var(--warn-border);
+  --color-info-bg: var(--info-bg);
+  --color-info-fg: var(--info-fg);
+  --color-info-border: var(--info-border);
+  --color-decision-bg: var(--decision-bg);
+  --color-decision-fg: var(--decision-fg);
+  --color-decision-border: var(--decision-border);
+  --color-neutral-bg: var(--neutral-bg);
+  --color-neutral-fg: var(--neutral-fg);
+  --color-pass-solid: var(--pass-solid);
+  --color-warn-solid: var(--warn-solid);
+  --color-fail-solid: var(--fail-solid);
+  --color-info-solid: var(--info-solid);
+  --color-decision-solid: var(--decision-solid);
+  --color-neutral-solid: var(--neutral-solid);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  /* 15px base. The density pass took this to 13 and it was simply too small to read for a shift; density
+     is better bought with tighter padding and line-height than by shrinking the type. */
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Uppercase micro-labels need letter-spacing to stay legible; without it they read as a smear. */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* Respect reduced-motion: the agent pulse and skeletons are decorative. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* A slashed zero in every monospace context. Identifiers are the whole job here, and `0` vs `O` is the
+   single most common confusion on a specimen label, worth spending a font feature on. */
+code, pre, .font-mono, [class*="font-mono"] {
+  font-variant-numeric: slashed-zero;
+}
+
+/* ---------------------------------------------------------------------------
+   Chrome. Depth comes from a wash and a hairline, never from a heavy shadow,
+   this is dense data software, and drop shadows on every panel read as clutter
+   once there are eight panels on screen.
+--------------------------------------------------------------------------- */
+body {
+  background-image: var(--page-wash);
+  background-attachment: fixed;
+}
+
+.panel {
+  background-color: var(--surface);
+  background-image: var(--surface-wash);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.rail {
+  background-image: var(--rail-wash);
+}
+
+/* Tabular figures everywhere a number is compared against another number. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------------------
+   Form controls, styled once here rather than per component. A native <select>
+   renders with the operating system's chrome, which is the single loudest tell
+   that an interface was assembled rather than designed, and it is the control
+   this product uses most, on every row of a manifest.
+--------------------------------------------------------------------------- */
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="datetime-local"],
+input[type="file"],
+input:not([type]),
+select,
+textarea {
+  border-radius: 8px;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) calc(50% + 1px),
+    calc(100% - 9px) calc(50% + 1px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 26px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 25%, transparent);
+}
+
+/* Placeholders should be visibly secondary, not a second body colour. */
+::placeholder {
+  color: var(--fg-subtle);
+  opacity: 1;
+}
+
+/* Rows in a data table respond to the pointer; nothing else moves. */
+tbody tr {
+  transition: background-color 90ms ease;
+}

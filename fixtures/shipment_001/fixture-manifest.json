@@ -1,0 +1,20 @@
+{
+  "files": {
+    "consent/initial/consent-records.json": "d39b989cc376da6f15b8c4ad8b65b68ffec76ef36620a001b58f0a0305d7a6ce",
+    "consent/received-later/consent-addendum.json": "a5708395fff461306ec3f5ea31552b11152c1759b2d5507e1752d0a83d2f1008",
+    "consent/received-later/sender-reply.json": "feb73b8cb00701f6ae47ff5131db24e0be0c223de61d48f2d1c93ff8f24bc2ae",
+    "contacts/site-contacts.json": "1f8ec60397c2353e9fc2af2e58402874866e994484eebf47eaa29b471ae99dee",
+    "custody/chain-of-custody.json": "b81432ef4aa62dee7c753210d04e19f0b727a93e81c2e4af0e22d66cd1d40ef0",
+    "expected/checkpoints.json": "0f1ae3ca0fc48510e4f55625fd328b679f60dfac8d2b5f6918b96ab51f162bc2",
+    "expected/final-state.json": "ce0bdcbe2842c8bdfe67971da6344a1a5d8bf704a950e72470a60a6617afe32a",
+    "labels/scanner-export.json": "8567d289c01c127d0b6549ba92edea000b4e992675bda09216312b26b0ef3323",
+    "lims/initial-records.json": "9a8ee2f65b964a75cded9d41052e37b6eb7f287c442a3618f22a4927b6ed7160",
+    "manifest.csv": "f218edd4c9a17f956e94c60059d9790b091c0dfca84457647731ba51d4c513d4",
+    "protocol/PROTO-042.json": "d6b26051e16dd483d9e721ac9918fa774eed45810687dce192fcf691081f5ec2",
+    "protocol/PROTO-042.md": "2075a09de4aa2a662323cedcc0e38cf20a86e20f818b557de88a47494592626d",
+    "shipment.json": "65c7b39c62a80249042ea9be2a97162cbaf5a8eb8f51fbcd6489fa52bb38d3a7",
+    "temperature/LOGGER-A.csv": "b6466721d813008ce0b26ce11b3b4648613e516442c462d2a441134e375eebdf",
+    "temperature/LOGGER-B.csv": "3e7b54a2d4ec73aec19a56b57a02819cc36598b27d69513380ef057e5c1648e5"
+  },
+  "seed": 20260827
+}

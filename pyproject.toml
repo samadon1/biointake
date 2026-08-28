@@ -1,0 +1,67 @@
+[project]
+name = "biointake"
+version = "0.1.0"
+description = "BioIntake: autonomous biospecimen-intake coordinator (Strands Agents + Bedrock AgentCore)."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "bedrock-agentcore>=1.22.0",
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "pydantic>=2.11,<3",
+    "strands-agents>=1.53,<2",
+    "uvicorn>=0.52.4",
+]
+
+[project.optional-dependencies]
+# For the live-model evaluation only. The deployed runtime speaks to Bedrock and has no use for this,
+# wheel that gets packaged for AgentCore.
+anthropic = ["strands-agents[anthropic]>=1.53,<2"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.12",
+    "mypy>=1.16",
+    "strands-agents[anthropic]>=1.53,<2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/biointake"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "scripts"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+src = ["src", "tests", "scripts", "spikes"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "W"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/biointake/api/app.py" = ["B008"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src/biointake"]
+plugins = ["pydantic.mypy"]
+warn_unused_ignores = false
+
+[[tool.mypy.overrides]]
+module = ["boto3", "boto3.*", "botocore", "botocore.*", "bedrock_agentcore", "bedrock_agentcore.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["biointake.agent.agentcore_app"]
+disable_error_code = ["untyped-decorator", "misc"]
